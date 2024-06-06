@@ -1,0 +1,19 @@
+[workspace]
+members = [
+    "tt_core",
+    "tt_auth",
+    "tt_server_demo",
+]
+exclude = ["tt_server_demo"]
+
+[profile.release]
+codegen-units = 1  # 生成一个执行文件
+incremental = true  # 增量编译
+lto = true  # 链接时优化
+opt-level = 'z' # 编译优先考虑大小
+
+[profile.release.package.tt_core]
+opt-level = 3
+
+[profile.release.package.tt_server_demo]
+opt-level = 3

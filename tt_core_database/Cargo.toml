@@ -1,0 +1,16 @@
+[package]
+name = "tt_core_database"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+tokio = { version = "1.37.0", features = ["full"] }
+sqlx = { version = "0.7.4", features = ["mysql", "runtime-tokio-rustls"] }
+sqlx-cli = "0.7.4"
+once_cell = "1.19.0"
+
+tt_core = { path = "../tt_core" }
+lazy_static = "1.4.0"
+
+state = { version = "0.6.0", features = ["tls"] }
+
